@@ -1,21 +1,17 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { Tournaments } from "@/components/tournaments"
-import { Coaches } from "@/components/coaches"
-import { Memberships } from "@/components/memberships"
-import { Gallery } from "@/components/gallery"
-import { Footer } from "@/components/footer"
+import { Coaches } from '@/components/coaches'
+import { Gallery } from '@/components/gallery'
+import { Hero } from '@/components/hero'
+import { Memberships } from '@/components/memberships'
+import { Tournaments } from '@/components/tournaments'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
       <Hero />
       <Tournaments />
       <Coaches />
       <Memberships />
       <Gallery />
-      <Footer />
     </main>
   )
 }

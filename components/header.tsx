@@ -2,13 +2,14 @@
 
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border ">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -28,12 +29,12 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="#inicio"
+            <Link
+              href="/"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Inicio
-            </a>
+            </Link>
             <a
               href="#torneos"
               className="text-foreground hover:text-primary transition-colors font-medium"
@@ -86,12 +87,12 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
-              <a
-                href="#inicio"
+              <Link
+                href="/"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Inicio
-              </a>
+              </Link>
               <a
                 href="#torneos"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"

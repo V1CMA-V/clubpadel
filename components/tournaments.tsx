@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, MapPin, Users } from 'lucide-react'
+import Link from 'next/link'
 
 const tournaments = [
   {
@@ -88,7 +89,7 @@ export function Tournaments() {
                 </div>
 
                 {/* Date */}
-                <div className="absolute top-4 right-4 bg-card/95 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
+                <div className="absolute top-4 right-4 bg-card/55 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
                   <p className="text-xs text-muted-foreground font-semibold">
                     {tournament.date.split(' ')[0]}
                   </p>
@@ -120,9 +121,11 @@ export function Tournaments() {
                   <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                     Inscribirse
                   </Button>
-                  <Button variant="outline" className="flex-1 ">
-                    Ver Detalles
-                  </Button>
+                  <Link href="/tournaments" className="flex-1">
+                    <Button variant="outline" className="w-full">
+                      Ver Detalles
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
