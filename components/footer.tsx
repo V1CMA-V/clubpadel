@@ -1,6 +1,14 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  Youtube,
+} from 'lucide-react'
 
 export function Footer() {
   return (
@@ -11,27 +19,48 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary-foreground">PM</span>
+                <span className="text-2xl font-bold text-primary-foreground">
+                  PM
+                </span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">ProMaster</h3>
-                <p className="text-xs uppercase tracking-wider opacity-80">Padel Club</p>
+                <p className="text-xs uppercase tracking-wider opacity-80">
+                  Padel Club
+                </p>
               </div>
             </div>
             <p className="text-sm opacity-80 text-pretty">
-              El club de pádel donde la pasión se encuentra con la excelencia profesional.
+              El club de pádel donde la pasión se encuentra con la excelencia
+              profesional.
             </p>
             <div className="flex gap-3">
-              <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-primary hover:text-primary-foreground"
+              >
                 <Facebook className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-primary hover:text-primary-foreground"
+              >
                 <Instagram className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-primary hover:text-primary-foreground"
+              >
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-primary-foreground">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-primary hover:text-primary-foreground"
+              >
                 <Youtube className="w-5 h-5" />
               </Button>
             </div>
@@ -42,27 +71,42 @@ export function Footer() {
             <h4 className="font-bold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#inicio" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#inicio"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#torneos" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#torneos"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Torneos
                 </a>
               </li>
               <li>
-                <a href="#entrenadores" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#entrenadores"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Entrenadores
                 </a>
               </li>
               <li>
-                <a href="#membresias" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#membresias"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Membresías
                 </a>
               </li>
               <li>
-                <a href="#" className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                <a
+                  href="#"
+                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                >
                   Tienda
                 </a>
               </li>
@@ -75,11 +119,13 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
-                <span className="opacity-80">Av. Principal 123, Madrid, España</span>
+                <span className="opacity-80">
+                  Av. Principal 123, Madrid, España
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 flex-shrink-0 text-primary" />
-                <span className="opacity-80">+34 900 123 456</span>
+                <span className="opacity-80">+52 220 123 456</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 flex-shrink-0 text-primary" />
@@ -91,14 +137,18 @@ export function Footer() {
           {/* Newsletter */}
           <div>
             <h4 className="font-bold mb-4">Newsletter</h4>
-            <p className="text-sm opacity-80 mb-4 text-pretty">Recibe las últimas noticias y ofertas exclusivas</p>
+            <p className="text-sm opacity-80 mb-4 text-pretty">
+              Recibe las últimas noticias y ofertas exclusivas
+            </p>
             <div className="flex gap-2">
               <Input
                 type="email"
                 placeholder="Tu email"
                 className="bg-background/10 border-background/20 text-background placeholder:text-background/50"
               />
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Enviar</Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Enviar
+              </Button>
             </div>
           </div>
         </div>

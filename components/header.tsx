@@ -2,14 +2,13 @@
 
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import { useState } from 'react'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border ">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -29,12 +28,12 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link
+            <a
               href="/"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Inicio
-            </Link>
+            </a>
             <a
               href="#torneos"
               className="text-foreground hover:text-primary transition-colors font-medium"
@@ -87,12 +86,12 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
-              <Link
-                href="/"
+              <a
+                href="#inicio"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Inicio
-              </Link>
+              </a>
               <a
                 href="#torneos"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
@@ -118,9 +117,7 @@ export function Header() {
                 Contacto
               </a>
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="outline" className="w-full">
-                  Iniciar Sesión
-                </Button>
+                <Button variant="outline">Iniciar Sesión</Button>
                 <Button className="w-full bg-primary text-primary-foreground">
                   Reservar Cancha
                 </Button>

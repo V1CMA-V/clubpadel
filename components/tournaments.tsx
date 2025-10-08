@@ -89,7 +89,7 @@ export function Tournaments() {
                 </div>
 
                 {/* Date */}
-                <div className="absolute top-4 right-4 bg-card/55 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
+                <div className="absolute top-4 right-4 bg-card/95 backdrop-blur-sm rounded-lg px-3 py-2 text-center">
                   <p className="text-xs text-muted-foreground font-semibold">
                     {tournament.date.split(' ')[0]}
                   </p>
@@ -121,7 +121,7 @@ export function Tournaments() {
                   <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                     Inscribirse
                   </Button>
-                  <Link href="/tournaments" className="flex-1">
+                  <Link href={`/torneos/${tournament.id}`} className="flex-1">
                     <Button variant="outline" className="w-full">
                       Ver Detalles
                     </Button>

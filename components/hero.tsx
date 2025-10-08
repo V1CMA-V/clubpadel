@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Calendar, Trophy, Users } from 'lucide-react'
-import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -41,15 +40,9 @@ export function Hero() {
                 Reservar Cancha
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Link href="#torneos" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg h-14 px-8"
-                >
-                  Ver Torneos
-                </Button>
-              </Link>
+              <Button size="lg" variant="outline" className="text-lg h-14 px-8">
+                Ver Torneos
+              </Button>
             </div>
 
             {/* Stats */}
