@@ -63,7 +63,7 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                     1er Lugar
                   </span>
                 </div>
-                <span className="text-2xl font-bold text-primary">$2.500</span>
+                <span className="text-2xl font-bold text-primary">$2,500</span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-lg bg-muted">
                 <div className="flex items-center gap-3">
