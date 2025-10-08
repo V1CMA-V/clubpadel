@@ -73,7 +73,7 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                   </span>
                 </div>
                 <span className="text-xl font-bold text-foreground">
-                  $1.500
+                  $1,500
                 </span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-lg bg-muted">

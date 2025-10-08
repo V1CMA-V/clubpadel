@@ -24,7 +24,7 @@ export function AdminTournamentsList() {
       category: 'Profesional',
       participants: 32,
       status: 'active',
-      prize: '$5.000',
+      prize: '$5,000',
     },
     {
       id: '2',
@@ -33,7 +33,7 @@ export function AdminTournamentsList() {
       category: 'Amateur',
       participants: 24,
       status: 'upcoming',
-      prize: '$2.000',
+      prize: '$2,000',
     },
     {
       id: '3',
@@ -42,7 +42,7 @@ export function AdminTournamentsList() {
       category: 'Mixto',
       participants: 28,
       status: 'completed',
-      prize: '$3.000',
+      prize: '$3,000',
     },
   ])
 
