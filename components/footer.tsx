@@ -9,26 +9,17 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
+import Image from 'next/image'
 
 export function Footer() {
   return (
-    <footer id="contacto" className="bg-foreground text-background">
+    <footer id="contacto" className="bg-black/90 text-background">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary-foreground">
-                  PM
-                </span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">ProMaster</h3>
-                <p className="text-xs uppercase tracking-wider opacity-80">
-                  Padel Club
-                </p>
-              </div>
+              <Image src="/LOGO-PADEL.png" alt="Logo" width={200} height={200} />
             </div>
             <p className="text-sm opacity-80 text-pretty">
               El club de pádel donde la pasión se encuentra con la excelencia
@@ -73,7 +64,7 @@ export function Footer() {
               <li>
                 <a
                   href="#inicio"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                  className="opacity-80 hover:opacity-100 hover:text-blue-300 transition-colors"
                 >
                   Inicio
                 </a>
@@ -81,7 +72,7 @@ export function Footer() {
               <li>
                 <a
                   href="#torneos"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                  className="opacity-80 hover:opacity-100 hover:text-blue-300 transition-colors"
                 >
                   Torneos
                 </a>
@@ -89,23 +80,15 @@ export function Footer() {
               <li>
                 <a
                   href="#entrenadores"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                  className="opacity-80 hover:opacity-100 hover:text-blue-300 transition-colors"
                 >
                   Entrenadores
                 </a>
               </li>
               <li>
                 <a
-                  href="#membresias"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
-                >
-                  Membresías
-                </a>
-              </li>
-              <li>
-                <a
                   href="#"
-                  className="opacity-80 hover:opacity-100 hover:text-primary transition-colors"
+                  className="opacity-80 hover:opacity-100 hover:text-blue-300 transition-colors"
                 >
                   Tienda
                 </a>
@@ -118,18 +101,19 @@ export function Footer() {
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-red-500" />
                 <span className="opacity-80">
-                  Av. Principal 123, Madrid, España
+                  LATERAL SUR, Recta a Cholula 3502, Barrio Real, 72813 Heroica Puebla de Zaragoza, Pue.
                 </span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-5 h-5 flex-shrink-0 text-primary" />
-                <span className="opacity-80">+52 220 123 456</span>
+                <Phone className="w-5 h-5 flex-shrink-0 text-blue-500" />
+                <span className="opacity-80">221 149 9442
+                </span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 flex-shrink-0 text-primary" />
-                <span className="opacity-80">info@promaster.com</span>
+                <Mail className="w-5 h-5 flex-shrink-0 text-red-500" />
+                <span className="opacity-80">promasterpuebla@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -168,6 +152,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, MapPin, Users } from 'lucide-react'
+
 import Link from 'next/link'
 
 const tournaments = [
@@ -11,7 +12,7 @@ const tournaments = [
     location: 'Canchas Principales',
     category: 'ABIERTO',
     participants: '32 Equipos',
-    image: '/padel-tournament-action-shot-red-tones.jpg',
+    image: '/promotion.png',
     color: 'primary',
   },
   {
@@ -21,7 +22,7 @@ const tournaments = [
     location: 'Todas las Canchas',
     category: 'PROFESIONAL',
     participants: '48 Equipos',
-    image: '/padel-player-celebrating-victory-blue-tones.jpg',
+    image: '/img-1.png',
     color: 'secondary',
   },
   {
@@ -31,7 +32,7 @@ const tournaments = [
     location: 'Canchas Premium',
     category: 'MIXTO',
     participants: '40 Equipos',
-    image: '/padel-doubles-team-playing-match.jpg',
+    image: '/club.png',
     color: 'accent',
   },
 ]
@@ -53,9 +54,12 @@ export function Tournaments() {
           <Button
             variant="ghost"
             className="hidden md:flex items-center gap-2 text-primary hover:text-primary/80"
+            asChild
           >
-            Ver Todos
-            <ArrowRight className="w-4 h-4" />
+            <Link href="/torneos">
+              Ver Todos
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </Button>
         </div>
 
@@ -76,13 +80,12 @@ export function Tournaments() {
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
                   <span
-                    className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-                      tournament.color === 'primary'
-                        ? 'bg-primary text-primary-foreground'
-                        : tournament.color === 'secondary'
+                    className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${tournament.color === 'primary'
+                      ? 'bg-primary text-primary-foreground'
+                      : tournament.color === 'secondary'
                         ? 'bg-secondary text-secondary-foreground'
                         : 'bg-accent text-accent-foreground'
-                    }`}
+                      }`}
                   >
                     {tournament.category}
                   </span>
@@ -121,11 +124,11 @@ export function Tournaments() {
                   <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                     Inscribirse
                   </Button>
-                  <Link href={`/torneos/${tournament.id}`} className="flex-1">
-                    <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full flex-1" asChild>
+                    <Link href={`/torneos/${tournament.id}`}>
                       Ver Detalles
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </Card>
@@ -139,6 +142,6 @@ export function Tournaments() {
           </Button>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

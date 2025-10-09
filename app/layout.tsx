@@ -5,9 +5,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'ProMaster - Gestión de torneos deportivos',
+  title: 'ProMaster - Club de Padel Profesional',
   description:
-    'Plataforma para organizar y gestionar torneos deportivos de manera eficiente y sencilla.',
+    'Club de Padel Profesional ubicado en Puebla, Mexico. Con mas de 8 canchas de primera calidad y entrenadores profesionales.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

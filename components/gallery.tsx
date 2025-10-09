@@ -1,19 +1,19 @@
 export function Gallery() {
   const images = [
     {
-      src: "/modern-padel-court-aerial-view.jpg",
+      src: "/club-2.png",
       alt: "Canchas de pádel modernas",
     },
     {
-      src: "/padel-players-training-session.jpg",
+      src: "/club.png",
       alt: "Sesión de entrenamiento",
     },
     {
-      src: "/padel-club-facilities-lounge-area.jpg",
+      src: "/club-3.png",
       alt: "Instalaciones del club",
     },
     {
-      src: "/padel-tournament-celebration.jpg",
+      src: "/club-4.png",
       alt: "Celebración de torneo",
     },
   ]

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card"
-import { Trophy, Medal, Award } from "lucide-react"
+import { Award, Medal, Trophy } from "lucide-react"
 
 const rankings = [
   {

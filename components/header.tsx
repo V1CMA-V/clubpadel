@@ -1,7 +1,7 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function Header() {
@@ -13,17 +13,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">
-                PM
-              </span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">ProMaster</h1>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                Padel Club
-              </p>
-            </div>
+            <Image src="/LOGO-PADEL.png" alt="Logo" width={200} height={200} />
           </div>
 
           {/* Desktop Navigation */}
@@ -47,12 +37,6 @@ export function Header() {
               Entrenadores
             </a>
             <a
-              href="#membresias"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Membresías
-            </a>
-            <a
               href="#contacto"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
@@ -60,13 +44,15 @@ export function Header() {
             </a>
           </nav>
 
-          {/* CTA Buttons */}
+          <div></div>
+
+          {/* CTA Buttons
           <div className="hidden md:flex items-center gap-3">
             <Button variant="outline">Iniciar Sesión</Button>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
               Reservar Cancha
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -105,23 +91,17 @@ export function Header() {
                 Entrenadores
               </a>
               <a
-                href="#membresias"
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
-              >
-                Membresías
-              </a>
-              <a
                 href="#contacto"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Contacto
               </a>
-              <div className="flex flex-col gap-2 pt-4">
+              {/* <div className="flex flex-col gap-2 pt-4">
                 <Button variant="outline">Iniciar Sesión</Button>
                 <Button className="w-full bg-primary text-primary-foreground">
                   Reservar Cancha
                 </Button>
-              </div>
+              </div> */}
             </nav>
           </div>
         )}
