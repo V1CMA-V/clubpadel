@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button'
-import { Calendar, MapPin, Trophy, Users } from 'lucide-react'
+import { Calendar, FileText, MapPin, Trophy, Users } from 'lucide-react'
+import Link from 'next/link'
 
 const tournamentData: Record<string, any> = {
   '1': {
     title: 'Torneo de Primavera',
     date: '15-17 de Abril, 2025',
-    location: 'Canchas Principales - ProMaster Club',
+    location: ' ProMaster Club',
     category: 'ABIERTO',
     participants: '32 Equipos',
     prize: '$5,000',
@@ -15,7 +16,7 @@ const tournamentData: Record<string, any> = {
   '2': {
     title: 'Copa ProMaster',
     date: '8-10 de Mayo, 2025',
-    location: 'Todas las Canchas - ProMaster Club',
+    location: 'ProMaster Club',
     category: 'PROFESIONAL',
     participants: '48 Equipos',
     prize: '$10,000',
@@ -25,7 +26,7 @@ const tournamentData: Record<string, any> = {
   '3': {
     title: 'Campeonato de Verano',
     date: '20-22 de Junio, 2025',
-    location: 'Canchas Premium - ProMaster Club',
+    location: 'ProMaster Club',
     category: 'MIXTO',
     participants: '40 Equipos',
     prize: '$7,500',
@@ -83,7 +84,7 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
               <div>
                 <p className="text-sm text-muted-foreground">Ubicación</p>
                 <p className="font-semibold">
-                  {tournament.location.split(' - ')[0]}
+                  {tournament.location}
                 </p>
               </div>
             </div>
@@ -116,8 +117,11 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
             >
               Inscribirse Ahora
             </Button>
-            <Button size="lg" variant="outline">
-              Descargar Reglamento
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/Reglamento_Torneo_ProMasterPadel.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="w-5 h-5 mr-2" />
+                Descargar Reglamento
+              </Link>
             </Button>
           </div>
         </div>

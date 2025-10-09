@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { DollarSign, Download, FileText, Info, Trophy } from 'lucide-react'
+import Link from 'next/link'
 
 export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
   return (
@@ -41,9 +42,11 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                 </span>
               </li>
             </ul>
-            <Button variant="outline" className="w-full">
-              <Download className="w-4 h-4 mr-2" />
-              Descargar Reglamento Completo
+            <Button variant="outline" className="w-full" asChild>
+              <Link href="Reglamento_Torneo_ProMasterPadel.pdf" target="_blank" download>
+                <Download className="w-4 h-4 mr-2" />
+                Descargar Reglamento Completo
+              </Link>
             </Button>
           </Card>
 
