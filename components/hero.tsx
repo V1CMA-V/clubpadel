@@ -8,7 +8,7 @@ export function Hero() {
       className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-secondary/5" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -40,11 +40,7 @@ export function Hero() {
                 Reservar Cancha
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg h-14 px-8 bg-transparent"
-              >
+              <Button size="lg" variant="outline" className="text-lg h-14 px-8">
                 Ver Torneos
               </Button>
             </div>
@@ -62,7 +58,7 @@ export function Hero() {
               </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <Trophy className="w-5 h-5 text-secondary" />
+                  <Trophy className="w-5 h-5 text-primary" />
                   <p className="text-3xl font-bold text-foreground">12</p>
                 </div>
                 <p className="text-sm text-muted-foreground">Canchas Premium</p>
@@ -81,7 +77,7 @@ export function Hero() {
 
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+            <div className="aspect-4/5 rounded-2xl overflow-hidden bg-linear-to-br from-primary/20 to-secondary/20">
               <img
                 src="/professional-padel-player-hitting-ball-on-modern-c.jpg"
                 alt="Jugador de pádel profesional"

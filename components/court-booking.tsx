@@ -418,7 +418,7 @@ export function CourtBooking() {
 
                     {/* Booking Summary */}
                     {selectedSlot && (
-                      <div className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg space-y-4">
+                      <div className="p-6 bg-linear-to-br from-primary/5 to-secondary/5 rounded-lg space-y-4">
                         <h3 className="text-xl font-bold text-foreground">
                           Resumen de Reserva
                         </h3>

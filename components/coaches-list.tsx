@@ -87,13 +87,13 @@ export function CoachesList() {
               className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+              <div className="relative aspect-4/3 overflow-hidden bg-linear-to-br from-primary/10 to-secondary/10">
                 <img
                   src={coach.image || '/placeholder.svg'}
                   alt={coach.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
                 {/* Rating badge */}
                 <div className="absolute top-4 right-4 bg-card/95 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5">

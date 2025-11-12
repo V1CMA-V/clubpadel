@@ -118,17 +118,17 @@ export function Footer() {
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-primary" />
                 <span className="opacity-80">
                   Av. Principal 123, Madrid, España
                 </span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Phone className="w-5 h-5 shrink-0 text-primary" />
                 <span className="opacity-80">+34 900 123 456</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Mail className="w-5 h-5 shrink-0 text-primary" />
                 <span className="opacity-80">info@promaster.com</span>
               </li>
             </ul>

@@ -46,7 +46,7 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
           alt={tournament.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/80 to-background/40" />
       </div>
 
       {/* Content */}
@@ -77,8 +77,8 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
             </div>
 
             <div className="flex items-center gap-3 text-foreground">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-secondary" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Ubicación</p>
@@ -89,8 +89,8 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
             </div>
 
             <div className="flex items-center gap-3 text-foreground">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Participantes</p>
@@ -110,17 +110,8 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Inscribirse Ahora
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
-            >
+            <Button size="lg">Inscribirse Ahora</Button>
+            <Button size="lg" variant="outline">
               Descargar Reglamento
             </Button>
           </div>

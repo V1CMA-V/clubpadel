@@ -39,7 +39,7 @@ export function TournamentPodium({ tournamentId, categoryId }: PodiumProps) {
       case 1:
         return {
           height: 'h-64',
-          bgGradient: 'bg-gradient-to-br from-yellow-400 to-yellow-600',
+          bgGradient: 'bg-linear-to-br from-yellow-400 to-yellow-600',
           textColor: 'text-yellow-600',
           icon: Trophy,
           iconSize: 'w-12 h-12',
@@ -48,7 +48,7 @@ export function TournamentPodium({ tournamentId, categoryId }: PodiumProps) {
       case 2:
         return {
           height: 'h-52',
-          bgGradient: 'bg-gradient-to-br from-gray-300 to-gray-500',
+          bgGradient: 'bg-linear-to-br from-gray-300 to-gray-500',
           textColor: 'text-gray-500',
           icon: Medal,
           iconSize: 'w-10 h-10',
@@ -57,7 +57,7 @@ export function TournamentPodium({ tournamentId, categoryId }: PodiumProps) {
       case 3:
         return {
           height: 'h-44',
-          bgGradient: 'bg-gradient-to-br from-orange-400 to-orange-600',
+          bgGradient: 'bg-linear-to-br from-orange-400 to-orange-600',
           textColor: 'text-orange-600',
           icon: Award,
           iconSize: 'w-10 h-10',
@@ -76,7 +76,7 @@ export function TournamentPodium({ tournamentId, categoryId }: PodiumProps) {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-16 bg-linear-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">

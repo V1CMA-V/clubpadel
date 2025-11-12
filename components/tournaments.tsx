@@ -122,10 +122,7 @@ export function Tournaments() {
                     Inscribirse
                   </Button>
                   <Link href={`/torneos/${tournament.id}`} className="flex-1">
-                    <Button
-                      variant="outline"
-                      className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
-                    >
+                    <Button variant="outline" className="w-full">
                       Ver Detalles
                     </Button>
                   </Link>

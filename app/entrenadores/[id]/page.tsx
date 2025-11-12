@@ -1,17 +1,19 @@
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import { CoachDetail } from '@/components/coach-details'
+import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 
-export default function CoachDetailPage({
+export default async function CoachDetailPage({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
+  const { id } = await params
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <CoachDetail coachId={params.id} />
+        <CoachDetail coachId={id} />
       </main>
       <Footer />
     </div>

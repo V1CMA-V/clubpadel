@@ -50,8 +50,8 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
           {/* Prize Distribution */}
           <Card className="p-8">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                <DollarSign className="w-6 h-6 text-secondary" />
+              <div className="w-12 h-12 rounded-lg bg-green-600/10 flex items-center justify-center">
+                <DollarSign className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">Premios</h3>
             </div>
@@ -63,7 +63,9 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                     1er Lugar
                   </span>
                 </div>
-                <span className="text-2xl font-bold text-primary">2.500€</span>
+                <span className="text-2xl font-bold text-yellow-500">
+                  2.500€
+                </span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-lg bg-muted">
                 <div className="flex items-center gap-3">
@@ -88,9 +90,9 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                 </span>
               </div>
             </div>
-            <div className="p-4 rounded-lg bg-accent/10 border border-accent/20">
+            <div className="p-4 rounded-lg bg-gray-400/10 border border-gray-400/20">
               <div className="flex items-start gap-2">
-                <Info className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                <Info className="w-5 h-5 text-gray-400 mt-0.5 shrink-0" />
                 <p className="text-sm text-muted-foreground">
                   Los premios se entregarán al finalizar el torneo. Todos los
                   participantes recibirán un diploma de participación.
@@ -102,8 +104,8 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
           {/* Registration Info */}
           <Card className="p-8 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Info className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 rounded-lg bg-gray-500/10 flex items-center justify-center">
+                <Info className="w-6 h-6 text-gray-500" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">
                 Información de Inscripción
@@ -147,11 +149,7 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
               >
                 Inscribirse Ahora
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
-              >
+              <Button size="lg" variant="outline">
                 Contactar Organizadores
               </Button>
             </div>

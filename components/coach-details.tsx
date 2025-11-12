@@ -390,6 +390,8 @@ const coachesData: Record<
 export function CoachDetail({ coachId }: { coachId: string }) {
   const coach = coachesData[coachId]
 
+  console.log('Coach Id:', coachId)
+
   if (!coach) {
     return (
       <div className="container mx-auto px-4 py-20">
@@ -406,13 +408,13 @@ export function CoachDetail({ coachId }: { coachId: string }) {
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Image */}
-          <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative aspect-4/3 lg:aspect-3/4 rounded-2xl overflow-hidden shadow-2xl">
             <img
               src={coach.image || '/placeholder.svg'}
               alt={coach.name}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
             {/* Badges */}
             <div className="absolute top-6 right-6 bg-card/95 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2">
@@ -456,7 +458,7 @@ export function CoachDetail({ coachId }: { coachId: string }) {
               {coach.stats.map((stat, index) => (
                 <Card
                   key={index}
-                  className="p-4 text-center border-0 bg-gradient-to-br from-primary/5 to-secondary/5"
+                  className="p-4 text-center border-0 bg-linear-to-br from-primary/5 to-secondary/5"
                 >
                   <p className="text-2xl font-bold text-foreground mb-1">
                     {stat.value}
@@ -493,7 +495,7 @@ export function CoachDetail({ coachId }: { coachId: string }) {
           <div className="grid md:grid-cols-2 gap-3">
             {coach.certifications.map((cert, index) => (
               <div key={index} className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                 <span className="text-foreground">{cert}</span>
               </div>
             ))}

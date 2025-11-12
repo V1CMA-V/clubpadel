@@ -29,50 +29,42 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="/#inicio"
+            <Link
+              href="/"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Inicio
-            </a>
-            <a
-              href="/#torneos"
+            </Link>
+            <Link
+              href="/torneos"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Torneos
-            </a>
+            </Link>
             <Link
               href="/entrenadores"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Entrenadores
             </Link>
-            <a
-              href="/#membresias"
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Membresías
-            </a>
-            <a
-              href="/#contacto"
+
+            <Link
+              href="/contacto"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contacto
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button
-              variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
-            >
-              Iniciar Sesión
-            </Button>
-            <Link href="/reservar-cancha">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Reservar Cancha
+            <Link href="/login">
+              <Button variant="outline" className="cursor-pointer">
+                Iniciar Sesión
               </Button>
+            </Link>
+            <Link href="/reservar-cancha">
+              <Button className="cursor-pointer">Reservar Cancha</Button>
             </Link>
           </div>
 
@@ -94,43 +86,33 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
-              <a
-                href="/#inicio"
+              <Link
+                href="/"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Inicio
-              </a>
-              <a
-                href="/#torneos"
+              </Link>
+              <Link
+                href="/torneos"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Torneos
-              </a>
+              </Link>
               <Link
                 href="/entrenadores"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Entrenadores
               </Link>
-              <a
-                href="/#membresias"
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
-              >
-                Membresías
-              </a>
-              <a
-                href="/#contacto"
+
+              <Link
+                href="/contacto"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Contacto
-              </a>
+              </Link>
               <div className="flex flex-col gap-2 pt-4">
-                <Button
-                  variant="outline"
-                  className="w-full border-secondary text-secondary bg-transparent"
-                >
-                  Iniciar Sesión
-                </Button>
+                <Button variant="outline">Iniciar Sesión</Button>
                 <Link href="/reservar-cancha">
                   <Button className="w-full bg-primary text-primary-foreground">
                     Reservar Cancha

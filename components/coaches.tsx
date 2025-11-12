@@ -76,13 +76,13 @@ export function Coaches() {
               key={coach.id}
               className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+              <div className="relative aspect-3/4 overflow-hidden bg-linear-to-br from-primary/10 to-secondary/10">
                 <img
                   src={coach.image || '/placeholder.svg'}
                   alt={coach.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Rating badge */}
                 <div className="absolute top-4 right-4 bg-card/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1">
@@ -126,13 +126,13 @@ export function Coaches() {
         {/* Mobile Carousel */}
         <div className="md:hidden relative">
           <Card className="overflow-hidden border-0 shadow-lg">
-            <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div className="relative aspect-3/4 overflow-hidden bg-linear-to-br from-primary/10 to-secondary/10">
               <img
                 src={coaches[currentIndex].image || '/placeholder.svg'}
                 alt={coaches[currentIndex].name}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
               <div className="absolute top-4 right-4 bg-card/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1">
                 <Star className="w-4 h-4 fill-primary text-primary" />
