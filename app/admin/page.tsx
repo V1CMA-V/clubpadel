@@ -6,7 +6,7 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="mt-16 mb-8">
+      <main>
         <AdminDashboard />
       </main>
       <Footer />

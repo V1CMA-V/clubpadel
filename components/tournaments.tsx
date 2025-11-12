@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ArrowRight, MapPin, Users } from 'lucide-react'
-
 import Link from 'next/link'
 
 const tournaments = [
@@ -12,7 +11,7 @@ const tournaments = [
     location: 'Canchas Principales',
     category: 'ABIERTO',
     participants: '32 Equipos',
-    image: '/promotion.png',
+    image: '/padel-tournament-action-shot-red-tones.jpg',
     color: 'primary',
   },
   {
@@ -22,7 +21,7 @@ const tournaments = [
     location: 'Todas las Canchas',
     category: 'PROFESIONAL',
     participants: '48 Equipos',
-    image: '/img-1.png',
+    image: '/padel-player-celebrating-victory-blue-tones.jpg',
     color: 'secondary',
   },
   {
@@ -32,7 +31,7 @@ const tournaments = [
     location: 'Canchas Premium',
     category: 'MIXTO',
     participants: '40 Equipos',
-    image: '/club.png',
+    image: '/padel-doubles-team-playing-match.jpg',
     color: 'accent',
   },
 ]
@@ -54,12 +53,9 @@ export function Tournaments() {
           <Button
             variant="ghost"
             className="hidden md:flex items-center gap-2 text-primary hover:text-primary/80"
-            asChild
           >
-            <Link href="/torneos">
-              Ver Todos
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            Ver Todos
+            <ArrowRight className="w-4 h-4" />
           </Button>
         </div>
 
@@ -69,23 +65,24 @@ export function Tournaments() {
               key={tournament.id}
               className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-4/3 overflow-hidden">
                 <img
                   src={tournament.image || '/placeholder.svg'}
                   alt={tournament.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
                   <span
-                    className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${tournament.color === 'primary'
-                      ? 'bg-primary text-primary-foreground'
-                      : tournament.color === 'secondary'
+                    className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
+                      tournament.color === 'primary'
+                        ? 'bg-primary text-primary-foreground'
+                        : tournament.color === 'secondary'
                         ? 'bg-secondary text-secondary-foreground'
                         : 'bg-accent text-accent-foreground'
-                      }`}
+                    }`}
                   >
                     {tournament.category}
                   </span>
@@ -124,11 +121,14 @@ export function Tournaments() {
                   <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                     Inscribirse
                   </Button>
-                  <Button variant="outline" className="w-full flex-1" asChild>
-                    <Link href={`/torneos/${tournament.id}`}>
+                  <Link href={`/torneos/${tournament.id}`} className="flex-1">
+                    <Button
+                      variant="outline"
+                      className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+                    >
                       Ver Detalles
-                    </Link>
-                  </Button>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -142,6 +142,6 @@ export function Tournaments() {
           </Button>
         </div>
       </div>
-    </section >
+    </section>
   )
 }

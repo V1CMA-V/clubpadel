@@ -1,17 +1,17 @@
-import { AdminParticipants } from '@/components/admin-participants'
+import { AdminGroups } from '@/components/admin-groups'
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 
-export default function TournamentParticipantsPage({
+export default function CategoryGroupsPage({
   params,
 }: {
-  params: { id: string }
+  params: { id: string; categoryId: string }
 }) {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <AdminParticipants tournamentId={params.id} />
+        <AdminGroups tournamentId={params.id} categoryId={params.categoryId} />
       </main>
       <Footer />
     </div>

@@ -179,7 +179,7 @@ export function AdminTournamentForm({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="prize">Premio ($) *</Label>
+                  <Label htmlFor="prize">Premio (€) *</Label>
                   <Input
                     id="prize"
                     name="prize"

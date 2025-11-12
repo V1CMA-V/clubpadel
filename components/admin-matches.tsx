@@ -23,8 +23,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
       round: 'Final',
       player1: 'Carlos Martínez',
       player2: 'Miguel Rodríguez',
-      player3: 'Juan Pérez',
-      player4: 'Luis Gómez',
       score: '6-4, 6-3',
       date: '2024-07-20',
       time: '18:00',
@@ -36,8 +34,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
       round: 'Semifinal',
       player1: 'Ana García',
       player2: 'Laura Sánchez',
-      player3: 'Marta Fernández',
-      player4: 'Sofía Torres',
       score: '6-2, 4-6, 7-5',
       date: '2024-07-19',
       time: '16:00',
@@ -49,8 +45,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
       round: 'Cuartos de Final',
       player1: 'Pedro López',
       player2: 'Juan Fernández',
-      player3: 'Diego Ramírez',
-      player4: 'Javier Morales',
       score: '',
       date: '2024-07-18',
       time: '10:00',
@@ -63,8 +57,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
     round: '',
     player1: '',
     player2: '',
-    player3: '',
-    player4: '',
     date: '',
     time: '',
     court: '',
@@ -78,8 +70,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
       round: '',
       player1: '',
       player2: '',
-      player3: '',
-      player4: '',
       date: '',
       time: '',
       court: '',
@@ -196,36 +186,6 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="player3 ">Jugador 3 *</Label>
-                <Input
-                  id="player3"
-                  value={newMatch.player3}
-                  onChange={(e) =>
-                    setNewMatch((prev) => ({
-                      ...prev,
-                      player3: e.target.value,
-                    }))
-                  }
-                  placeholder="Nombre del jugador"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="player4">Jugador 4 *</Label>
-                <Input
-                  id="player4"
-                  value={newMatch.player4}
-                  onChange={(e) =>
-                    setNewMatch((prev) => ({
-                      ...prev,
-                      player4: e.target.value,
-                    }))
-                  }
-                  placeholder="Nombre del jugador"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
                 <Label htmlFor="date">Fecha *</Label>
                 <Input
                   id="date"
@@ -293,7 +253,7 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
                         <div className="space-y-2 mb-4">
                           <div className="flex items-center justify-between">
                             <span className="font-semibold text-foreground">
-                              {match.player1} | {match.player3}
+                              {match.player1}
                             </span>
                             {match.score && (
                               <span className="text-muted-foreground">
@@ -303,7 +263,7 @@ export function AdminMatches({ tournamentId }: AdminMatchesProps) {
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="font-semibold text-foreground">
-                              {match.player2} | {match.player4}
+                              {match.player2}
                             </span>
                             {match.score && (
                               <span className="text-muted-foreground">

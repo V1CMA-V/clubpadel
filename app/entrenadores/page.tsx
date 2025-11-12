@@ -1,13 +1,13 @@
-import { AdminTournamentForm } from '@/components/admin-tournament-form'
+import { CoachesList } from '@/components/coaches-list'
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 
-export default function NewTournamentPage() {
+export default function EntrenadoresPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        <AdminTournamentForm />
+      <main className="pt-20">
+        <CoachesList />
       </main>
       <Footer />
     </div>

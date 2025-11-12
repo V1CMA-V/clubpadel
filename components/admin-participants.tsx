@@ -23,7 +23,7 @@ export function AdminParticipants({ tournamentId }: AdminParticipantsProps) {
       id: '1',
       name: 'Carlos Martínez',
       email: 'carlos@email.com',
-      phone: '+52 220 123 456',
+      phone: '+34 600 123 456',
       ranking: 1,
       status: 'confirmed',
     },
@@ -31,7 +31,7 @@ export function AdminParticipants({ tournamentId }: AdminParticipantsProps) {
       id: '2',
       name: 'Ana García',
       email: 'ana@email.com',
-      phone: '+52 220 234 567',
+      phone: '+34 600 234 567',
       ranking: 3,
       status: 'confirmed',
     },
@@ -39,7 +39,7 @@ export function AdminParticipants({ tournamentId }: AdminParticipantsProps) {
       id: '3',
       name: 'Miguel Rodríguez',
       email: 'miguel@email.com',
-      phone: '+52 220 345 678',
+      phone: '+34 600 345 678',
       ranking: 2,
       status: 'pending',
     },
@@ -47,7 +47,7 @@ export function AdminParticipants({ tournamentId }: AdminParticipantsProps) {
       id: '4',
       name: 'Laura Sánchez',
       email: 'laura@email.com',
-      phone: '+52 220 456 789',
+      phone: '+34 600 456 789',
       ranking: 5,
       status: 'confirmed',
     },
@@ -151,7 +151,7 @@ export function AdminParticipants({ tournamentId }: AdminParticipantsProps) {
                       phone: e.target.value,
                     }))
                   }
-                  placeholder="+52 220 000 000"
+                  placeholder="+34 600 000 000"
                 />
               </div>
               <div className="space-y-2">

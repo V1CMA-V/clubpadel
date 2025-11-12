@@ -40,7 +40,11 @@ export function Hero() {
                 Reservar Cancha
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg h-14 px-8">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg h-14 px-8 bg-transparent"
+              >
                 Ver Torneos
               </Button>
             </div>
@@ -48,28 +52,28 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="space-y-1">
-                <div className="flex items-center gap-2 justify-center">
+                <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-primary" />
                   <p className="text-3xl font-bold text-foreground">500+</p>
                 </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Jugadores Activos
+                <p className="text-sm text-muted-foreground">
+                  Miembros Activos
                 </p>
               </div>
               <div className="space-y-1">
-                <div className="flex items-center gap-2 justify-center">
-                  <Trophy className="w-5 h-5 text-primary" />
-                  <p className="text-3xl font-bold text-foreground">8</p>
+                <div className="flex items-center gap-2">
+                  <Trophy className="w-5 h-5 text-secondary" />
+                  <p className="text-3xl font-bold text-foreground">12</p>
                 </div>
-                <p className="text-sm text-muted-foreground text-center">Canchas Premium</p>
+                <p className="text-sm text-muted-foreground">Canchas Premium</p>
               </div>
               <div className="space-y-1">
-                <div className="flex items-center gap-2 justify-center">
+                <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <p className="text-3xl font-bold text-foreground">8:00 / 20:00</p>
+                  <p className="text-3xl font-bold text-foreground">24/7</p>
                 </div>
-                <p className="text-sm text-muted-foreground text-center">
-                  Horario Disponible
+                <p className="text-sm text-muted-foreground">
+                  Acceso Disponible
                 </p>
               </div>
             </div>
@@ -79,7 +83,7 @@ export function Hero() {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
               <img
-                src="/jugador.jpg"
+                src="/professional-padel-player-hitting-ball-on-modern-c.jpg"
                 alt="Jugador de pádel profesional"
                 className="w-full h-full object-cover"
               />

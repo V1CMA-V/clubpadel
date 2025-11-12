@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { DollarSign, Download, FileText, Info, Trophy } from 'lucide-react'
-import Link from 'next/link'
 
 export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
   return (
@@ -42,19 +41,17 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                 </span>
               </li>
             </ul>
-            <Button variant="outline" className="w-full" asChild>
-              <Link href="Reglamento_Torneo_ProMasterPadel.pdf" target="_blank" download>
-                <Download className="w-4 h-4 mr-2" />
-                Descargar Reglamento Completo
-              </Link>
+            <Button variant="outline" className="w-full bg-transparent">
+              <Download className="w-4 h-4 mr-2" />
+              Descargar Reglamento Completo
             </Button>
           </Card>
 
           {/* Prize Distribution */}
           <Card className="p-8">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <DollarSign className="w-6 h-6" />
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                <DollarSign className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">Premios</h3>
             </div>
@@ -66,7 +63,7 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                     1er Lugar
                   </span>
                 </div>
-                <span className="text-2xl font-bold text-primary">$2,500</span>
+                <span className="text-2xl font-bold text-primary">2.500€</span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-lg bg-muted">
                 <div className="flex items-center gap-3">
@@ -76,7 +73,7 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                   </span>
                 </div>
                 <span className="text-xl font-bold text-foreground">
-                  $1,500
+                  1.500€
                 </span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-lg bg-muted">
@@ -87,13 +84,13 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
                   </span>
                 </div>
                 <span className="text-xl font-bold text-foreground">
-                  $500 c/u
+                  500€ c/u
                 </span>
               </div>
             </div>
-            <div className="p-4 rounded-lg bg-primary/10 border border-primary/20">
+            <div className="p-4 rounded-lg bg-accent/10 border border-accent/20">
               <div className="flex items-start gap-2">
-                <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <Info className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-muted-foreground">
                   Los premios se entregarán al finalizar el torneo. Todos los
                   participantes recibirán un diploma de participación.
@@ -105,8 +102,8 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
           {/* Registration Info */}
           <Card className="p-8 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Info className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                <Info className="w-6 h-6 text-accent" />
               </div>
               <h3 className="text-2xl font-bold text-foreground">
                 Información de Inscripción
@@ -127,8 +124,8 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
               <div>
                 <h4 className="font-semibold text-foreground mb-2">Costos</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Socios: $40 por equipo</li>
-                  <li>• No socios: $60 por equipo</li>
+                  <li>• Socios: 40€ por equipo</li>
+                  <li>• No socios: 60€ por equipo</li>
                   <li>• Incluye: Pelotas oficiales y arbitraje</li>
                 </ul>
               </div>
@@ -150,7 +147,11 @@ export function TournamentInfo({ tournamentId }: { tournamentId: string }) {
               >
                 Inscribirse Ahora
               </Button>
-              <Button size="lg" variant="outline">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+              >
                 Contactar Organizadores
               </Button>
             </div>

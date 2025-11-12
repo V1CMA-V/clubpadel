@@ -1,7 +1,8 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
-import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export function Header() {
@@ -12,47 +13,68 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <Image src="/LOGO-PADEL.png" alt="Logo" width={200} height={200} />
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-2xl font-bold text-primary-foreground">
+                PM
+              </span>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">ProMaster</h1>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider">
+                Padel Club
+              </p>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="/"
+              href="/#inicio"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Inicio
             </a>
             <a
-              href="#torneos"
+              href="/#torneos"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Torneos
             </a>
-            <a
-              href="#entrenadores"
+            <Link
+              href="/entrenadores"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Entrenadores
+            </Link>
+            <a
+              href="/#membresias"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Membresías
             </a>
             <a
-              href="#contacto"
+              href="/#contacto"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contacto
             </a>
           </nav>
 
-          <div></div>
-
-          {/* CTA Buttons
+          {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline">Iniciar Sesión</Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Reservar Cancha
+            <Button
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+            >
+              Iniciar Sesión
             </Button>
-          </div> */}
+            <Link href="/reservar-cancha">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Reservar Cancha
+              </Button>
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -73,35 +95,48 @@ export function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
               <a
-                href="#inicio"
+                href="/#inicio"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Inicio
               </a>
               <a
-                href="#torneos"
+                href="/#torneos"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Torneos
               </a>
-              <a
-                href="#entrenadores"
+              <Link
+                href="/entrenadores"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Entrenadores
+              </Link>
+              <a
+                href="/#membresias"
+                className="text-foreground hover:text-primary transition-colors font-medium py-2"
+              >
+                Membresías
               </a>
               <a
-                href="#contacto"
+                href="/#contacto"
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
               >
                 Contacto
               </a>
-              {/* <div className="flex flex-col gap-2 pt-4">
-                <Button variant="outline">Iniciar Sesión</Button>
-                <Button className="w-full bg-primary text-primary-foreground">
-                  Reservar Cancha
+              <div className="flex flex-col gap-2 pt-4">
+                <Button
+                  variant="outline"
+                  className="w-full border-secondary text-secondary bg-transparent"
+                >
+                  Iniciar Sesión
                 </Button>
-              </div> */}
+                <Link href="/reservar-cancha">
+                  <Button className="w-full bg-primary text-primary-foreground">
+                    Reservar Cancha
+                  </Button>
+                </Link>
+              </div>
             </nav>
           </div>
         )}

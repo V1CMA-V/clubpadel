@@ -12,7 +12,6 @@ export default function Home() {
       <Hero />
       <Tournaments />
       <Coaches />
-      {/* <Memberships /> */}
       <Gallery />
       <Footer />
     </main>

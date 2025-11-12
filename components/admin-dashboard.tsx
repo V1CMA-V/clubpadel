@@ -22,7 +22,7 @@ export function AdminDashboard() {
       label: 'Partidos Programados',
       value: '24',
       icon: Calendar,
-      color: 'text-red-600',
+      color: 'text-accent',
     },
     {
       label: 'Inscripciones Este Mes',

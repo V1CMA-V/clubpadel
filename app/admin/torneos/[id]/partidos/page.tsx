@@ -10,7 +10,7 @@ export default function TournamentMatchesPage({
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="mt-16 mb-8">
+      <main>
         <AdminMatches tournamentId={params.id} />
       </main>
       <Footer />

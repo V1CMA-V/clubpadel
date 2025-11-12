@@ -1,35 +1,34 @@
 import { Button } from '@/components/ui/button'
-import { Calendar, FileText, MapPin, Trophy, Users } from 'lucide-react'
-import Link from 'next/link'
+import { Calendar, MapPin, Trophy, Users } from 'lucide-react'
 
 const tournamentData: Record<string, any> = {
   '1': {
     title: 'Torneo de Primavera',
     date: '15-17 de Abril, 2025',
-    location: ' ProMaster Club',
+    location: 'Canchas Principales - ProMaster Club',
     category: 'ABIERTO',
     participants: '32 Equipos',
-    prize: '$5,000',
+    prize: '5.000€',
     status: 'Inscripciones Abiertas',
     image: '/padel-tournament-action-shot-red-tones.jpg',
   },
   '2': {
     title: 'Copa ProMaster',
     date: '8-10 de Mayo, 2025',
-    location: 'ProMaster Club',
+    location: 'Todas las Canchas - ProMaster Club',
     category: 'PROFESIONAL',
     participants: '48 Equipos',
-    prize: '$10,000',
+    prize: '10.000€',
     status: 'Inscripciones Abiertas',
     image: '/padel-player-celebrating-victory-blue-tones.jpg',
   },
   '3': {
     title: 'Campeonato de Verano',
     date: '20-22 de Junio, 2025',
-    location: 'ProMaster Club',
+    location: 'Canchas Premium - ProMaster Club',
     category: 'MIXTO',
     participants: '40 Equipos',
-    prize: '$7,500',
+    prize: '7.500€',
     status: 'Próximamente',
     image: '/padel-doubles-team-playing-match.jpg',
   },
@@ -78,20 +77,20 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
             </div>
 
             <div className="flex items-center gap-3 text-foreground">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-secondary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Ubicación</p>
                 <p className="font-semibold">
-                  {tournament.location}
+                  {tournament.location.split(' - ')[0]}
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 text-foreground">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                <Users className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Participantes</p>
@@ -117,11 +116,12 @@ export function TournamentHeader({ tournamentId }: { tournamentId: string }) {
             >
               Inscribirse Ahora
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/Reglamento_Torneo_ProMasterPadel.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="w-5 h-5 mr-2" />
-                Descargar Reglamento
-              </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+            >
+              Descargar Reglamento
             </Button>
           </div>
         </div>
